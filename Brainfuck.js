@@ -9,7 +9,7 @@ function bf (code) {
   let output = ''
   let err = 0
   for (let reader = 0; reader < code.length; reader ++) {
-    cell[pointer] = (cell[pointer] === undefined) ? 0 : cell[pointer]
+    cell[pointer] = cell[pointer] ?? 0
     cell[pointer] = (cell[pointer] < 0) ? 0 : cell[pointer]
     reader = (reader < 0) ? 0 : reader
     if (code[reader] === '>') { pointer ++ }
